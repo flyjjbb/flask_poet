@@ -1,0 +1,32 @@
+services:
+  # 应用容器实例
+  web:
+    image: poet:1.0
+    build:
+      context: "build"
+      dockerfile: Dockerfile
+    restart: "unless-stopped"
+    tty: true
+    networks:
+      - python-net
+    hostname: web
+    ports:
+     - "80:5000"
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_RUN_HOST=0.0.0.0
+    volumes:
+      # 将目录映射到容器，包含代码、模版和图片资源
+      - .\code:/code
+    depends_on:
+      - redis
+  
+  # Redis数据容器实例
+  redis:
+    image: redis:alpine
+    networks:
+      - python-net
+
+networks:
+  python-net:
+    name: python-br
