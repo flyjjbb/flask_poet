@@ -2,13 +2,13 @@
 使用FLASK创建应用：自动作诗
 
 # 使用FLASK创建应用：自动作诗
-> <img style="width:200px; display: inline-block" src="https://resource.xtalker.cn:8000/_static/img/poet.png"/>
+> <img style="width:200px; display: inline-block" src="img/poet.webp"/>
 
         诗仙 1.0
 
 # 1.概述
 
-> <img style="width:70%; display: inline-block" src="https://resource.xtalker.cn:8000/_static/img/flask-poet.png"/>
+> <img style="width:70%; display: inline-block" src="img/flask-poet.png"/>
 
     在上节课的基础上，增加如何调用业务处理的逻辑过程，各个模块各司其职：
         动态页面 - Flask Jinja
@@ -51,4 +51,4 @@ curl http://www.poet.org/
 <img style="width:200px; display: inline-block" src="static/flask-poet.png"/>
 ```
 # 3.浏览器访问 http://www.poet.org
-> <img style="width:50%; display: inline-block" src="https://resource.xtalker.cn:8000/_static/img/flask-poet-demo.png"/>
+> <img style="width:50%; display: inline-block" src="img/flask-poet-demo.png"/>
