@@ -13,12 +13,17 @@
 # 2.使用说明
 
 ```shell
-git clone https://github.com/cdut2025/flask_poet.git
+git clone https://github.com/flyjjbb/flask_poet.git
 cd flask_poet
 
 # 构建
-docker-compose build
+docker-compose build poet
 ...
+
+# 构建成功会在主机生成镜像：poet:1.0
+docker images
+REPOSITORY              TAG             IMAGE ID       CREATED         SIZE
+poet                    1.0             2bdd8a930783   7 hours ago     282MB
 
 # 创建并启动
 docker-compose up -d
@@ -26,8 +31,7 @@ docker-compose up -d
  ✔ Container flask_poet-redis-1  Running                                                                           0.0s
  ✔ Container flask_poet-web-1    Running
 
-
-# 构建成功会在主机生成镜像：poet:1.0
+# 查看启动的容器：应用和数据库
 docker-compose images
 CONTAINER            REPOSITORY          TAG                 IMAGE ID            SIZE
 flask_poet-redis-1   redis               alpine              f597a450f464        40.7MB
